@@ -1,26 +1,7 @@
-# README
+# Automated tests for a Login/Logout in https://www.saucedemo.com/ with Ruby, Capybara, RSpec
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Tests runned in CircleCI and BrowserStack
 
-Things you may want to cover:
+# Report with Allure
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# SaucedemoAutomatedTests
-# SaucedemoAutomatedTests
