@@ -1,0 +1,11 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: prepavenir/saucedemo_automated_tests_v.0.0.1 # the primary container, where your job's commands are run
+        auth:
+          username: prepavenir
+          password: 2xHNsPcdhQnpV3S  # context / project UI env-var reference
+    steps:
+      - checkout # check out the code in the project directory
+      - run: echo "hello world" # run the `echo` command
