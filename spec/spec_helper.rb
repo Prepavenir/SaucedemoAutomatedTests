@@ -14,13 +14,14 @@
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-require "allure-rspec"
+require 'rails_helper'
+require 'allure-rspec'
   #Adaptor to use the Allure framework along with the RSpec. 
-RSpec.configure do |c|
-  c.include AllureRSpec::Adaptor
-  #c.output_dir = "/whatever/you/like" # default: gen/allure-results
-  c.clean_dir = false # clean the output directory first? (default: true)
-  c.logging_level = Logger::DEBUG # logging level (default: DEBUG)
+AllureRspec.configure do |c|
+  c.results_directory = 'report/allure-results'
+  c.clean_results_directory = true
+  c.link_tms_pattern = 'https://example.org/tms/{}'#jira?
+  c.link_issue_pattern = 'https://example.org/issue/{}'#confluence?
 end
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
