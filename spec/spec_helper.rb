@@ -15,6 +15,13 @@
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require "allure-rspec"
+  #Adaptor to use the Allure framework along with the RSpec. 
+RSpec.configure do |c|
+  c.include AllureRSpec::Adaptor
+  #c.output_dir = "/whatever/you/like" # default: gen/allure-results
+  c.clean_dir = false # clean the output directory first? (default: true)
+  c.logging_level = Logger::DEBUG # logging level (default: DEBUG)
+end
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
